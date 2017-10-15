@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         "Tashkent is the capital of what country?"
     ]
     let answers              = [
-        [
             [
                 "Jerusalem",
                 "Dushanbe",
@@ -92,7 +91,7 @@ class ViewController: UIViewController {
                 "Oman"
             ]
         ]
-    ]
+    
     let correctAnswers       = [
         0,
         1,
@@ -121,11 +120,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        displayQuestion(index: currentQuestionIndex)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func displayQuestion(index:Int) {
+        questionLabel.text = questions[index]
+        answerButton0.setTitle(answers[index][0], for: .normal)
+        answerButton1.setTitle(answers[index][1], for: .normal)
+        answerButton2.setTitle(answers[index][2], for: .normal)
+        answerButton3.setTitle(answers[index][3], for: .normal)
+    }
+    
+    @IBAction func checkAnswer(sender: AnyObject){
+        if(sender.tag == correctAnswers[currentQuestionIndex]){
+        }
     }
 
 
