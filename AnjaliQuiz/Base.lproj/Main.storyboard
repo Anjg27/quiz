@@ -28,18 +28,36 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czI-an-hY5">
                                         <state key="normal" title="A"/>
+                                        <connections>
+                                            <action selector="chooseAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pzp-j2-Rg3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh9-Hu-h0f">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bCb-0M-JM5"/>
+                                        </constraints>
                                         <state key="normal" title="B"/>
+                                        <connections>
+                                            <action selector="chooseAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Xb-xx-6sI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mb-6b-6he">
                                         <state key="normal" title="C"/>
+                                        <connections>
+                                            <action selector="chooseAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sy8-lo-hWJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiI-Jy-puO">
                                         <state key="normal" title="D"/>
+                                        <connections>
+                                            <action selector="chooseAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQC-Qe-Lzo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWH-4u-uGp">
                                         <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="checkAnswerWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvo-Zr-e85"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

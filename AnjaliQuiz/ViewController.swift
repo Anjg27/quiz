@@ -93,29 +93,21 @@ class ViewController: UIViewController {
         ]
     
     let correctAnswers       = [
-        0,
-        1,
+        
         1,
         3,
         2,
-        2,
-        3,
         1,
-        4,
         0,
-        5,
         2,
-        6,
         2,
-        7,
         0,
-        8,
         3,
-        9,
-        0
+        1
     ]
     
-    let currentQuestionIndex = 0
+    var currentQuestionIndex = 0
+    var choice = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,9 +130,17 @@ class ViewController: UIViewController {
         answerButton3.setTitle(answers[index][3], for: .normal)
     }
     
+    @IBAction func chooseAnswer(_ sender: AnyObject) {
+        choice = sender.tag
+    }
+    
+    
     @IBAction func checkAnswer(sender: AnyObject){
-        if(sender.tag == correctAnswers[currentQuestionIndex]){
+        if(choice == correctAnswers[currentQuestionIndex]){
+          currentQuestionIndex = (currentQuestionIndex + 1) % 10
+            displayQuestion(index: currentQuestionIndex)
         }
+        
     }
 
 
