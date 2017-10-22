@@ -17,6 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerButton3: UIButton!
     @IBOutlet weak var submitButton:  UIButton!
     
+    let defaultTextColor       = UIColor.blue
+    let defaultBackgroundColor = UIColor.clear
+    
+    let chosenTextColor        = UIColor.white
+    let chosenBackgroundColor  = UIColor.blue
+     
+    
     let questions            = [
         "What is the capital of Tajikistan?",
         "Tbilisi is the capital of what country?",
@@ -132,12 +139,30 @@ class ViewController: UIViewController {
     
     @IBAction func chooseAnswer(_ sender: AnyObject) {
         choice = sender.tag
+        updateButtonChoice()
+    }
+    
+    func updateButtonChoice() {
+        answerButton0.backgroundColor = choice == 0 ? chosenBackgroundColor : defaultBackgroundColor
+        answerButton0.setTitleColor(choice == 0 ? chosenTextColor : defaultTextColor, for: .normal)
+        
+        answerButton1.backgroundColor = choice == 1 ? chosenBackgroundColor : defaultBackgroundColor
+        answerButton1.setTitleColor(choice == 1 ? chosenTextColor : defaultTextColor, for: .normal)
+        
+        answerButton2.backgroundColor = choice == 2 ? chosenBackgroundColor : defaultBackgroundColor
+        answerButton2.setTitleColor(choice == 2 ? chosenTextColor : defaultTextColor, for: .normal)
+        
+        answerButton3.backgroundColor = choice == 3 ? chosenBackgroundColor : defaultBackgroundColor
+        answerButton3.setTitleColor(choice == 3 ? chosenTextColor : defaultTextColor, for: .normal)
+
     }
     
     
     @IBAction func checkAnswer(sender: AnyObject){
         if(choice == correctAnswers[currentQuestionIndex]){
           currentQuestionIndex = (currentQuestionIndex + 1) % 10
+            choice = -1
+            updateButtonChoice()
             displayQuestion(index: currentQuestionIndex)
         }
         
