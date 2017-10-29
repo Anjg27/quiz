@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerButton3: UIButton!
     @IBOutlet weak var submitButton:  UIButton!
     
-    let defaultTextColor       = UIColor.blue
-    let defaultBackgroundColor = UIColor.clear
+    let defaultTextColor       = UIColor.purple
+    let defaultBackgroundColor = UIColor.white
     
     let chosenTextColor        = UIColor.white
-    let chosenBackgroundColor  = UIColor.blue
+    let chosenBackgroundColor  = UIColor.purple
      
     
     let questions            = [
